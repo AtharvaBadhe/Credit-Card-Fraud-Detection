@@ -26,7 +26,7 @@ A complete, production-ready fraud detection solution built on the benchmark Kag
 
 ## Live Demo
 
-https://grok.com/share/bGVnYWN5_0b002026-98e1-4b09-ad15-ba5bbfe4f098
+https://credit-card-fraud-detection-fbew7dzyppi8tqyjdjh5eh.streamlit.app/
 
 ## Quick Start
 
