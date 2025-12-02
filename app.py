@@ -8,16 +8,13 @@ import lightgbm as lgb
 from datetime import datetime
 
 
-s
+
 st.set_page_config(page_title="Fraud Detection Dashboard", layout="wide")
 
 # --------------------------- Load Data ---------------------------
 base = Path(__file__).resolve().parent
 results_path = base / "notebooks" / "app" / "results.csv"
 results_path = "results.csv"
-if not os.path.exists("notebooks/app/results.csv"):
-    st.error("results.csv not found. Run notebooks 06-07 first.")
-    st.stop()
 
 df_results = pd.read_csv(results_path)
 val_df = pd.read_csv('../data/processed/val_features.csv')
