@@ -8,25 +8,12 @@ import lightgbm as lgb
 from datetime import datetime
 
 
-st.header("DEBUG INFO (Temporary)")
-st.write("CWD:", os.getcwd())
-
-def safe_list(path):
-    try:
-        return os.listdir(path)
-    except Exception as e:
-        return f"ERROR listing {path}: {e}"
-
-st.write("Root:", safe_list("."))
-st.write("Notebooks:", safe_list("notebooks"))
-st.write("Notebooks/app:", safe_list("notebooks/app"))
-st.write("Full tree:")
-for root, dirs, files in os.walk(".", topdown=True):
-    st.write(root, files)
-
+s
 st.set_page_config(page_title="Fraud Detection Dashboard", layout="wide")
 
 # --------------------------- Load Data ---------------------------
+base = Path(__file__).resolve().parent
+results_path = base / "notebooks" / "app" / "results.csv"
 results_path = "results.csv"
 if not os.path.exists("notebooks/app/results.csv"):
     st.error("results.csv not found. Run notebooks 06-07 first.")
