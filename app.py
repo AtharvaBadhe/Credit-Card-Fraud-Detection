@@ -10,8 +10,8 @@ from datetime import datetime
 st.set_page_config(page_title="Fraud Detection Dashboard", layout="wide")
 
 # --------------------------- Load Data ---------------------------
-results_path = "notebooks/app/results.csv"
-if not os.path.exists("../notebooks/app/results.csv"):
+results_path = "results.csv"
+if not os.path.exists("notebooks/app/results.csv"):
     st.error("results.csv not found. Run notebooks 06-07 first.")
     st.stop()
 
