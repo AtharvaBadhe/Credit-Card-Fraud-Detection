@@ -18,7 +18,7 @@ results_path = base / "notebooks" / "app" / "results.csv"
 results_path = "results.csv"
 
 df_results = pd.read_csv(results_path)
-val_df = pd.read_csv('../data/processed/val_features.csv')
+val_df = pd.read_csv('val_features.csv')
 val_df['transaction_id'] = range(len(val_df))
 
 df = val_df.merge(
@@ -28,10 +28,10 @@ df = val_df.merge(
 )
 
 # Load thresholds & model
-with open('../data/threshold.json') as f:
+with open('threshold.json') as f:
     th = json.load(f)
-model = lgb.Booster(model_file='../data/models/lgbm_model.pkl')
-with open('../data/processed/feature_columns.json') as f:
+model = lgb.Booster(model_file='lgbm_model.pkl')
+with open('feature_columns.json') as f:
     features = json.load(f)
 
 # --------------------------- Calculations ---------------------------
